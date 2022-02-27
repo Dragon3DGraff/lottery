@@ -29,7 +29,7 @@ contract Lottery {
     }
 
     function sendMoney(address _to, uint _value) private  {
-        (bool sent, ) = _to.call{value: _value}("");
+        (bool sent, ) =  _to.call{value: _value}("");
         require(sent, "Failed to send Ether");
     }
 
